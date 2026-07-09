@@ -10,18 +10,18 @@
 
 ```
 -repo_shin/
-├─ README.md
-├─ CLAUDE.md
+├─ README.md                  ← 人間が「これは何?どう使う?」を知るための窓口
+├─ CLAUDE.md                  ← Claudeが「この場でどう振る舞うべきか」を知るための指示書
 │
-├─ Knowledge/                  ← 学びの記録
+├─ knowledge/                  ← 学びの記録
 │   ├─ github.md
-│   └─ Seminars/
-│       ├─ sample.md           ← セミナー記録の雛形
+│   └─ seminars/
+│       ├─ seminar-sample.md           ← セミナー記録の雛形
 │       ├─ 2026-07-08_XXXXXXX.md
 │       └─ ...
 │
-├─ Design/
-│   └─ Scrap/                  ← デザイン観察記録
+├─ design/
+│   └─ scrap/                  ← デザイン観察記録
 │       ├─ README.md
 │       ├─ taxonomy.md
 │       ├─ taste-profile.md
@@ -29,8 +29,8 @@
 │       ├─ entries/
 │       └─ assets/
 │
-└─ Development/
-    └─ Scrap-site/              ← Scrap/を表示するサイト実装
+└─ development/
+    └─ scrap-site/              ← scrap/を表示するサイト実装
         ├─ app/
         ├─ lib/
         └─ package.json
