@@ -1,60 +1,25 @@
-# CLAUDE.md — -repo_shin
+# プロジェクト: -repo_shin
+- **目的**: GitHubで更新可能な状態でナレッジを蓄積・更新し、Webフルスタック開発のスキルを習得する
+- **対象・トーン**: 自分向け / カジュアルで誰が読んでもわかりやすい日本語
 
-## このリポジトリの目的
-デザイナーが「企画→Webサイト開発→立ち上げ」までの一連を学ぶ過程を記録し、
-継続的にアップデートしていく個人の学習ログです。
-
----
-
-## ファイル構成
-
-```
+## ディレクトリ全体構成
 -repo_shin/
-├─ README.md                  ← 人間が「これは何?どう使う?」を知るための窓口
-├─ CLAUDE.md                  ← Claudeが「この場でどう振る舞うべきか」を知るための指示書
-│
-├─ knowledge/                  ← 学びの記録
-│   ├─ github.md
-│   └─ seminars/
-│       ├─ seminar-sample.md           ← セミナー記録の雛形
-│       ├─ 2026-07-08_XXXXXXX.md
-│       └─ ...
-│
+├─ knowledge/           # 技術・知識の記録（GitHub、セミナー等）
+│  └─ seminars/         # セミナー記録（日付順）
 ├─ design/
-│   └─ scrap/                  ← デザイン観察記録
-│       ├─ README.md
-│       ├─ taxonomy.md
-│       ├─ taste-profile.md
-│       ├─ disagreements.md
-│       ├─ entries/
-│       └─ assets/
-│
+│  └─ scrap/            # デザイン観察記録・審美眼のすり合わせ
+│     ├─ taste-profile.md
+│     └─ disagreements.md
 └─ development/
-    └─ scrap-site/              ← scrap/を表示するサイト実装
-        ├─ app/
-        ├─ lib/
-        └─ package.json
-```
+   └─ scrap-site/       # scrap/ のデータを表示するNext.jsサイト
 
----
+## 振る舞い・作業原則
+- **未確定要素の扱い**: 不明点は作業前に必ず質問する。「なぜ重要か」の理由がない提案はNG。
+- **根拠の明示**: 引用元情報を必ず記載する。仮説や仮定を置く場合は「仮定: 〇〇」と明記する。
+- **意見の一貫性**: ユーザーに過度に同調せず、客観的で率直な意見や対案を伝える。
 
-## 各フォルダの役割
-
-- **Knowledge/**：学んだ技術・知識の記録（GitHub運用、セミナー等）
-- **Design/Scrap/**：Webデザインの実例収集と審美眼のすり合わせ記録
-- **Development/Scrap-site/**：Scrap/のデータを表示するギャラリーサイトの実装
-  （Next.js。`lib/`内で `../../Design/Scrap/entries` を読み込む）
-
----
-
-## Claudeへのお願い
-
-- **Knowledge/Seminars/** の内容は時系列で増えていくので、要約や傾向分析を
-  頼まれたら日付順に読み込んで回答してください
-- **Design/Scrap/taste-profile.md** は、デザイン相談の際に最初に参照すべき
-  「好みの基準」です。新しいデザイン案件の相談を受けたら、まずここを
-  読み込んでから提案してください
-- **Design/Scrap/disagreements.md** は、意見が割れた事例集です。ここに
-  蓄積された傾向も踏まえて、率直な意見を伝えてください（同調しすぎない）
-- 各フォルダの内容が増えてきたら、定期的に傾向を要約し、該当する
-  ファイル（taste-profile.md等）に反映することを提案してください
+## フォルダ・ファイル固有のコンテキスト
+- **デザイン相談**: `design/scrap/taste-profile.md`（好みの基準）を最初に必ず参照して提案する。
+- **レビュー時**: `design/scrap/disagreements.md`（意見が割れた事例）の傾向を踏まえて回答する。
+- **セミナー・要約**: `knowledge/seminars/` の内容は日付順（時系列）に読み込んで要約・分析する。
+- **データ反映**: 各フォルダの内容が増えた場合、定期的に傾向を要約し `taste-profile.md` 等への反映を自ら提案する。
