@@ -10,46 +10,40 @@
 
 ```
 -repo_shin/
-├─ README.md
-├─ CLAUDE.md
+├─ README.md                   # リポジトリ全体の目的・地図
+├─ CLAUDE.md                   # Claude用リポジトリ説明書
 │
-├─ Knowledge/                  ← 学びの記録
-│   ├─ github.md
-│   └─ Seminars/
-│       ├─ sample.md           ← セミナー記録の雛形
-│       ├─ 2026-07-08_XXXXXXX.md
-│       └─ ...
-│
-├─ Design/
-│   └─ Scrap/                  ← デザイン観察記録
-│       ├─ README.md
-│       ├─ taxonomy.md
-│       ├─ taste-profile.md
-│       ├─ disagreements.md
-│       ├─ entries/
-│       └─ assets/
-│
-└─ Development/
-    └─ Scrap-site/              ← Scrap/を表示するサイト実装
-        ├─ app/
-        ├─ lib/
-        └─ package.json
+└─ Knowledge/                  # ツール・環境の使い方ナレッジ
+   ├─ github-knowledge.md
+   ├─ seminars/                # セミナー・勉強会の記録
+   │  ├─ seminar-template.md
+   │  └─ yyyy-mm-dd_xxxxxx.md
+   │
+   └─ reference/               # 参考デザイン
+      ├─ README.md             # このフォルダーの目的・地図
+      ├─ CLAUDE.md             # Claude用フォルダー説明書
+      ├─ reference-category.md # 参考サイトの分類基準
+      │
+      ├─ case-study/           # 参考サイトの事例研究md
+      │  └─ yyyy-mm-dd_xxxxxx.md
+      │
+      ├─ src/                  # reference/の画像などのアセット
+      │  └─ 2026-07-08_kagami-hero.png
+      │
+      └─ development/          # reference/を表示するサイト実装
+         ├─ app/
+         ├─ lib/
+         └─ package.json
 ```
 
----
+- `knowledge/` : Claude CodeとWebフルスタック開発を手伝うナレッジ
+- `reference/` : デザイン知見
+
+<!--　---
 
 ## 中身
 
 - [GitHub運用ナレッジ](./Knowledge/github.md)
 - [セミナー記録一覧](./Knowledge/Seminars/)
 - [デザインスクラップ](./Design/Scrap/)
-- [スクラップ閲覧サイト](./Development/Scrap-site/)
-
----
-
-## 運用ルール
-
-- セミナー参加後はその日のうちに `Knowledge/Seminars/YYYY-MM-DD_セミナー名.md` を作成
-  （雛形は `Knowledge/Seminars/sample.md` を複製して使う）
-- デザインスクラップは週次で2〜3件 `Design/Scrap/entries/` に追加
-- 月次で `Design/Scrap/taste-profile.md` をClaudeと壁打ちして更新
+- [スクラップ閲覧サイト](./Development/Scrap-site/)　-->

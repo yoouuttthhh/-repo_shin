@@ -7,6 +7,7 @@
 - 日本語 / Markdown / 簡潔で分かりやすく
 
 ## ファイルディレクトリ
+
 ```
 -repo_shin/
 ├─ README.md                   # リポジトリ全体の目的・地図
@@ -34,6 +35,7 @@
          ├─ lib/
          └─ package.json
 ```
+
 - `knowledge/` : Claude CodeとWebフルスタック開発を手伝うナレッジ
 - `reference/` : デザイン知見
 
