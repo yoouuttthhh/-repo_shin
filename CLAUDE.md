@@ -1,26 +1,49 @@
-# プロジェクト: -repo_shin
-- **目的**: GitHubで更新可能な状態でナレッジを蓄積・更新し、Webフルスタック開発のスキルを習得する
-- **対象・トーン**: 自分向け / カジュアルで誰が読んでもわかりやすい日本語
+# CLAUDE.md
+ 
+## レポジトリー: -repo_shin
+- 目的: GitHubで管理できるナレッジを蓄積し、Claude CodeとWebフルスタック開発スキルを継続的に向上するため
 
-## ディレクトリ全体構成
+## 出力
+- 日本語 / Markdown / 簡潔で分かりやすく
+
+## ファイルディレクトリ
 ```
 -repo_shin/
-├─ knowledge/           # 技術・知識の記録（GitHub、セミナー等）
-│  └─ seminars/         # セミナー記録（日付順）
-├─ design/
-│  └─ scrap/            # デザイン観察記録・審美眼のすり合わせ
-│     ├─ taste-profile.md
-│     └─ disagreements.md
-└─ development/
-   └─ scrap-site/       # scrap/ のデータを表示するNext.jsサイト
+├─ README.md                   # リポジトリ全体の目的・地図
+├─ CLAUDE.md                   # Claude用リポジトリ説明書
+│
+└─ Knowledge/                  # ツール・環境の使い方ナレッジ
+   ├─ github-knowledge.md
+   ├─ seminars/                # セミナー・勉強会の記録
+   │  ├─ seminar-template.md
+   │  └─ yyyy-mm-dd_xxxxxx.md
+   │
+   └─ reference/               # 参考デザイン
+      ├─ README.md             # このフォルダーの目的・地図
+      ├─ CLAUDE.md             # Claude用フォルダー説明書
+      ├─ reference-category.md # 参考サイトの分類基準
+      │
+      ├─ case-study/           # 参考サイトの事例研究md
+      │  └─ yyyy-mm-dd_xxxxxx.md
+      │
+      ├─ src/                  # reference/の画像などのアセット
+      │  └─ 2026-07-08_kagami-hero.png
+      │
+      └─ development/          # reference/を表示するサイト実装
+         ├─ app/
+         ├─ lib/
+         └─ package.json
 ```
-## 振る舞い・作業原則
-- **未確定要素の扱い**: 不明点は作業前に必ず質問する。「なぜ重要か」の理由がない提案はNG。
-- **根拠の明示**: 引用元情報を必ず記載する。仮説や仮定を置く場合は「仮定: 〇〇」と明記する。
-- **意見の一貫性**: ユーザーに過度に同調せず、客観的で率直な意見や対案を伝える。
+- `knowledge/` : Claude CodeとWebフルスタック開発を手伝うナレッジ
+- `reference/` : デザイン知見
 
-## フォルダ・ファイル固有のコンテキスト
-- **デザイン相談**: `design/scrap/taste-profile.md`（好みの基準）を最初に必ず参照して提案する。
-- **レビュー時**: `design/scrap/disagreements.md`（意見が割れた事例）の傾向を踏まえて回答する。
-- **セミナー・要約**: `knowledge/seminars/` の内容は日付順（時系列）に読み込んで要約・分析する。
-- **データ反映**: 各フォルダの内容が増えた場合、定期的に傾向を要約し `taste-profile.md` 等への反映を自ら提案する。
+## 振る舞い
+- 他のmdを参照するときにmd元を記載する
+- 引用元情報を必ず記載する
+- 不明点は作業前に必ず質問する。「なぜ重要か」の理由がない提案はしない
+- 仮説や仮定を置く場合は「仮説」、「仮定」と明記する
+- 過度に同調せず、客観的で率直な意見や対案を伝える
+
+## コンテキスト
+- **デザイン相談**は　`reference/case-study/` を参照
+- **その他**は　`Knowledge/`を参照
