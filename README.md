@@ -22,6 +22,7 @@
 │
 └─ knowledge/                     # ツール・環境の使い方ナレッジ
    ├─ github-knowledge.md
+   ├─ command.md                  # コマンド一覧
    │
    ├─ seminars/                   # セミナー・勉強会の記録
    │  ├─ seminar-template.md
