@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAMS Perspective Stack</title>
+    <style>
+        :root {
+            --bg-color: #f5f2eb;
+            --card-width: 90vw;
+            --card-height: 80vh;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* 固定表示されるカードの舞台 */
+        .visual-viewport {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            perspective: 1000px;
+        }
+
+        /* カードの共通スタイル */
+        .card {
+            position: absolute;
+            width: var(--card-width);
+            height: var(--card-height);
+            border-radius: 40px 40px 0px 0px;
+            padding: 60px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            will-change: transform, opacity;
+            /* 縮小した時に上辺を揃えるための基準点 */
+            transform-origin: center 10%;
+        }
+
+        /* カードの色設定 */
+        .card:nth-child(1) { background-color: #ffffff; z-index: 1; }
+        .card:nth-child(2) { background-color: #4b32c3; color: white; z-index: 2; }
+        .card:nth-child(3) { background-color: #d8f34d; z-index: 3; }
+        .card:nth-child(4) { background-color: #1a1a1a; color: white; z-index: 4; }
+        .card:nth-child(5) { background-color: #800000; color: white; z-index: 5; }
+
+        .card h2 { font-size: clamp(2rem, 6vw, 5rem); font-weight: 800; line-height: 1.1; }
+        .image-box {
+            width: 100%; height: 40%; background: rgba(128,128,128,0.1);
+            margin-top: auto; border-radius: 20px; border: 1px dashed rgba(0,0,0,0.1);
+        }
+
+        /* スクロールのための高さ確保 */
+        .spacer { height: 600vh; }
+    </style>
+</head>
+<body>
+
+    <div class="visual-viewport">
+        <div class="card"><h2>01<br>Social strategy</h2><div class="image-box"></div></div>
+        <div class="card"><h2>02<br>Branding drives</h2><div class="image-box"></div></div>
+        <div class="card"><h2>03<br>Global Network</h2><div class="image-box"></div></div>
+        <div class="card"><h2>04<br>Intuitive UI</h2><div class="image-box"></div></div>
+        <div class="card"><h2>05<br>Storey Spaces</h2><div class="image-box"></div>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <script>
+        const cards = document.querySelectorAll('.card');
+        const totalCards = cards.length;
+
+        function update() {
+            const scrollY = window.scrollY;
+            const vh = window.innerHeight;
+
+            cards.forEach((card, i) => {
+                // 各カードが「主役」になるスクロール区間
+                const start = i * vh;
+                const end = (i + 1) * vh;
+
+                let scale = 1;
+                let translateY = 0;
+                let opacity = 1;
+
+                if (scrollY < start) {
+                    // まだ画面の下に待機している状態
+                    translateY = vh; 
+                } 
+                else if (scrollY >= start && scrollY <= end) {
+                    // 下から上がってきて、定位置に固定されるまで
+                    const progress = (scrollY - start) / vh;
+                    translateY = vh * (1 - progress);
+                    scale = 1;
+                } 
+                else {
+                    // 定位置に固定された後（次のカードに追い越される際）
+                    // ここで「徐々に小さく、少し上にずらす」ことで層を作る
+                    const pastProgress = (scrollY - end) / vh;
+                    
+                    // JAMSのように、後ろにいくほど5%ずつ小さく、20pxずつ上に
+                    scale = 1 - (pastProgress * 0.05); 
+                    translateY = pastProgress * -20;
+                    
+                    // 次のカードがさらに重なると、この減少を累積させる必要があるが、
+                    // シンプルに「追い越されたカードすべて」に一律の段差をつける
+                    const stage = Math.floor((scrollY - end) / vh) + 1;
+                    scale = Math.max(0.8, 1 - ((scrollY - end) / vh * 0.05));
+                    translateY = (scrollY - end) / vh * -30;
+                }
+
+                // スムーズな多段レイヤーのための再計算
+                // 「自分より後のカードが何枚出たか」を基準にする
+                const currentStage = scrollY / vh;
+                if (currentStage > i + 1) {
+                    const diff = currentStage - (i + 1);
+                    scale = 1 - (diff * 0.04); // 1枚につき4%縮小
+                    translateY = diff * -25;    // 1枚につき25px上に
+                }
+
+                card.style.transform = `translateY(${translateY}px) scale(${scale})`;
+                card.style.opacity = opacity;
+            });
+        }
+
+        window.addEventListener('scroll', update);
+        update();
+    </script>
+</body>
+</html>
