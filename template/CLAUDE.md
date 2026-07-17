@@ -1,6 +1,6 @@
-# tem.md
-CLAUDE.mdを新規作成する時の構成テンプレート。
-スタイルルールは `prompt/md.md` に従うこと。
+# CLAUDE.md
+`template/`をの目的に合わせたtemplate.mdを新規作成する時の構成テンプレート。
+スタイルルールは `template/style.md` に従うこと。
 
 
 ## 使い方
@@ -26,7 +26,7 @@ CLAUDE.mdを新規作成する時の構成テンプレート。
 - `## ファイル構成` ：WBS形式のツリー（md.mdのルール参照）
 
 
-**CLAUDE.mdの例**
+**出力の例**
 ```
 # CLAUDE.md
 GitHubで管理できるナレッジを蓄積し、Claude CodeとWebフルスタック開発スキルを継続的に向上するため
