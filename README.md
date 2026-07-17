@@ -6,7 +6,7 @@
 
 ---
 
-## -repo_shinの/ファイル構成
+## -repo_shin/ファイル構成
 
 ```
 -repo_shin/
@@ -14,7 +14,8 @@
 ├─ CLAUDE.md                      # Claude用リポジトリ説明書
 │
 ├─ checklist/                     # チェックリスト集
-│  └─ accessibility.md            # ウェブアクセシビリティのチェックリスト（WCAG 2.0）
+│  ├─ accessibility.md            # ウェブアクセシビリティのチェックリスト（WCAG 2.0）
+│  └─ prompt.md                   # チェックリスト作成用プロンプト
 │
 ├─ knowledge/                     # ツール・環境の使い方ナレッジ
 │  ├─ github.md                   # GitHub運用ナレッジ
@@ -22,6 +23,10 @@
 │
 ├─ other/                         # Web開発（JS・PHP）の学習・検証用コード
 │  ├─ js/                         # Node.js学習サンプル
+│  │  ├─ double.js / file.js / hello.js / md.js
+│  │  ├─ sample.html / sample.md / text.txt
+│  │  ├─ package.json / package-lock.json
+│  │  └─ node_modules/            # 依存パッケージ（marked）
 │  └─ php/                        # PHP学習サンプル（現状は空）
 │
 ├─ prj-reference/                 # 参考デザイン
@@ -30,11 +35,14 @@
 │  ├─ UI-dictionary.md            # ユーザーインターフェースの分類基準
 │  └─ web-accessibility.md        # ウェブアクセシビリティの基準（WCAG 2.0）
 │
-├─ prompt/                        # プロンプト置き場（現状は空）
+├─ prompt/                        # プロンプト置き場
+│  ├─ asana_tem.md                # Asana用プロンプトテンプレート
+│  └─ claude-tem.md               # Claude用プロンプトテンプレート
 │
 ├─ seminars/                      # セミナー・勉強会の記録
 │  ├─ CLAUDE.md                   # セミナー要約プロンプトテンプレート
-│  └─ yyyy-mm-dd_xxxxxx.md
+│  ├─ 2026-07-10 ビームス&タカラトミーと考える 顧客の「行動」と「心理」が繋がる、ロイヤルティ設計.md
+│  └─ 2026-07-13_クロードコード入門.md
 │
 └─ wiki/                          # 開発用語Wiki
    ├─ CLAUDE.md                   # wiki追加用プロンプトテンプレート
