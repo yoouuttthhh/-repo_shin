@@ -1,4 +1,4 @@
-# command.md — コマンドリファレンス
+# dictionary.md
 
 人間もClaudeも読み取りやすい形式で管理するコマンド集。
 新しいコマンドを追加する際は `wiki-template.md` と同じ要領でClaudeに依頼する。
