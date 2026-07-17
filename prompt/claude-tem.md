@@ -76,8 +76,6 @@ GitHubで管理できるナレッジを蓄積し、Claude CodeとWebフルスタ
 - **その他**は　`knowledge/`を参照
 
 ## ファイル構成
-
-```
 -repo_shin/
 ├─ README.md                      # リポジトリ全体の目的・地図
 ├─ CLAUDE.md                      # Claude用リポジトリ説明書
