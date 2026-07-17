@@ -6,7 +6,7 @@
 ## 出力
 - 日本語 / Markdown / 簡潔で分かりやすく
 
-## ファイルディレクトリ
+## -repo_shinの/ファイル構成
 
 ```
 -repo_shin/
@@ -14,39 +14,40 @@
 ├─ CLAUDE.md                      # Claude用リポジトリ説明書
 │
 ├─ checklist/                     # チェックリスト集
-│  └─ accessibility-checklist.md  # ウェブアクセシビリティのチェックリスト（WCAG 2.0）
+│  └─ accessibility.md            # ウェブアクセシビリティのチェックリスト（WCAG 2.0）
 │
-├─ development/                   # Web開発（JS・PHP）の学習・検証用コード
+├─ knowledge/                     # ツール・環境の使い方ナレッジ
+│  ├─ github.md                   # GitHub運用ナレッジ
+│  └─ dictionary.md               # コマンドリファレンス
+│
+├─ other/                         # Web開発（JS・PHP）の学習・検証用コード
 │  ├─ js/                         # Node.js学習サンプル
-│  └─ php/                        # PHP学習サンプル
+│  └─ php/                        # PHP学習サンプル（現状は空）
 │
-└─ knowledge/                     # ツール・環境の使い方ナレッジ
-   ├─ github-knowledge.md
-   ├─ command.md                  # コマンド一覧
-   │
-   ├─ seminars/                   # セミナー・勉強会の記録
-   │  ├─ seminar-template.md
-   │  └─ yyyy-mm-dd_xxxxxx.md
-   │
-   ├─ wiki/                       # 開発用語Wiki
-   │  ├─ wiki-template.md         # wiki追加用プロンプトテンプレート
-   │  └─ wiki.md                  # 開発用語集
-   │
-   └─ reference/                  # 参考デザイン
-      ├─ README.md                # このフォルダーの目的・地図
-      ├─ reference-category.md    # 参考サイトの分類基準
-      ├─ UI-dictionary.md         # ユーザーインターフェースの分類基準
-      ├─ web-accessibility.md     # ウェブアクセシビリティの基準（WCAG 2.0）
-      │
-      ├─ case-study/              # 参考サイトの事例研究md（現状は空）
-      ├─ src/                     # reference/の画像などのアセット（現状は空）
-      └─ development/             # reference/を表示するサイト実装（現状は空）
+├─ prj-reference/                 # 参考デザイン
+│  ├─ CLAUDE.md                   # Claude用フォルダー説明書
+│  ├─ reference-category.md       # 参考サイトの分類基準
+│  ├─ UI-dictionary.md            # ユーザーインターフェースの分類基準
+│  └─ web-accessibility.md        # ウェブアクセシビリティの基準（WCAG 2.0）
+│
+├─ prompt/                        # プロンプト置き場（現状は空）
+│
+├─ seminars/                      # セミナー・勉強会の記録
+│  ├─ CLAUDE.md                   # セミナー要約プロンプトテンプレート
+│  └─ yyyy-mm-dd_xxxxxx.md
+│
+└─ wiki/                          # 開発用語Wiki
+   ├─ CLAUDE.md                   # wiki追加用プロンプトテンプレート
+   └─ wiki.md                     # 開発用語集
 ```
 
 - `checklist/` : チェックリスト集
-- `development/` : Web開発の学習・検証用コード（`reference/development/` とは別物）
 - `knowledge/` : Claude CodeとWebフルスタック開発を手伝うナレッジ
-- `reference/` : デザイン知見
+- `other/` : Web開発の学習・検証用コード
+- `prj-reference/` : デザイン知見
+- `prompt/` : 再利用プロンプト置き場
+- `seminars/` : セミナー・勉強会の記録
+- `wiki/` : 開発用語集
 
 ## 振る舞い
 - 他のmdを参照するときにmd元を記載する
@@ -56,5 +57,5 @@
 - 過度に同調せず、客観的で率直な意見や対案を伝える
 
 ## コンテキスト
-- **デザイン相談**は　`reference/case-study/` を参照
-- **その他**は　`Knowledge/`を参照
+- **デザイン相談**は　`prj-reference/` を参照
+- **その他**は　`knowledge/`を参照
