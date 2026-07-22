@@ -20,7 +20,7 @@ Claude CodeとWebフルスタック開発スキルを継続的に向上するた
 │
 ├─ knowledge/                     # ツール・環境の使い方ナレッジ
 │  ├─ github.md                   # GitHub運用ナレッジ
-│  └─ dictionary.md               # コマンドリファレンス
+│  └─ command-dictionary.md       # コマンドリファレンス
 │
 ├─ other/                         # Web開発（JS・PHP）の学習・検証用コード
 │  ├─ js/                         # Node.js学習サンプル
@@ -43,10 +43,15 @@ Claude CodeとWebフルスタック開発スキルを継続的に向上するた
 │
 ├─ template/                      # プロンプト・テンプレート置き場
 │  ├─ CLAUDE.md                   # Claude用フォルダー説明書
-│  ├─ asana-tem.md                # Asana用プロンプトテンプレート
+│  ├─ template-style.md           # Markdown記述スタイルルール
 │  ├─ claude-tem.md               # Claude用プロンプトテンプレート（CLAUDE.md作成用）
 │  ├─ readme-tem.md               # README用プロンプトテンプレート
-│  └─ template-style.md           # Markdown記述スタイルルール
+│  ├─ CHANGELOG-tem.md            # CHANGELOG用プロンプトテンプレート
+│  ├─ asana-tem.md                # Asana用プロンプトテンプレート
+│  ├─ meeting-notes-tem.md        # 議事録作成用プロンプトテンプレート
+│  ├─ faq-tem.md                  # FAQ追記用プロンプトテンプレート
+│  └─ competitor/                 # 競合分析テンプレート置き場
+│     └─ competitor-tem.md        # 競合ポジショニングマップ作成用テンプレート
 │
 └─ wiki/                          # 開発用語Wiki
    ├─ CLAUDE.md                   # wiki追加用プロンプトテンプレート
