@@ -1,4 +1,4 @@
-# meeting-notes.md
+# meeting-notes-tem.md
 議事録を作成するためのプロンプトテンプレート。画像・ボイスメモ・メモテキストのいずれかを入力として渡し、Claudeに議事録を生成させ、新しい日付順に並べさせる。
 スタイルルールは `-repo_shin/template/template-style.md` に従うこと。
 
