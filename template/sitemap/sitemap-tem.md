@@ -1,5 +1,6 @@
 # sitemap-tem.md
 サイトのページ構成変更・新規追加・修正・削除に対応し、`01_Plan/Sitemap/` 内のsitemap.md・CSVを新規作成・更新・削除するためのプロンプトテンプレート。
+スタイルルールは `template/template-style.md` に従うこと。
 
 
 ## 使い方
