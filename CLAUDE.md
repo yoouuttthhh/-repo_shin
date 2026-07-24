@@ -66,7 +66,8 @@ GitHubで管理できるナレッジを蓄積し、Claude CodeとWebフルスタ
 │  │  ├─ competitor-tem.md        # 競合ポジショニングマップ作成用テンプレート
 │  │  └─ thumbs/                  # サムネ画像置き場（現状は空）
 │  └─ Sitemap/                    # サイトマップテンプレート置き場
-│     ├─ sitemap-tem.md           # サイトマップ作成用プロンプトテンプレート
+│     ├─ sitemap-research.md      # 初回サイトマップ調査用プロンプトテンプレート（0→1）
+│     ├─ sitemap-tem.md           # サイトマップ新規作成・更新用プロンプトテンプレート（通常運用）
 │     ├─ sitemap-sample.csv       # サイトマップCSVのサンプル
 │     └─ sitema-sample.xlsx       # サイトマップXLSXのサンプル
 │
