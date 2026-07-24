@@ -95,8 +95,7 @@ GitHubで管理できるナレッジを蓄積し、Claude CodeとWebフルスタ
 │  └─ Sitemap/                    # サイトマップテンプレート置き場
 │     ├─ sitemap-research.md      # 初回サイトマップ調査用プロンプトテンプレート（0→1）
 │     ├─ sitemap-tem.md           # サイトマップ新規作成・更新用プロンプトテンプレート（通常運用）
-│     ├─ sitemap-sample.csv       # サイトマップCSVのサンプル
-│     └─ sitema-sample.xlsx       # サイトマップXLSXのサンプル
+│     └─ sitemap-sample.csv       # サイトマップCSVのサンプル
 │
 └─ Wiki/                          # 開発用語Wiki
    ├─ CLAUDE.md                   # wiki追加用プロンプトテンプレート

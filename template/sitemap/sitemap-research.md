@@ -1,5 +1,5 @@
 # sitemap-research.md
-プロジェクトをゼロから始める際、依頼されたサイト（すでに稼働している既存サイト）のページ構成を調査し、`01_Plan/Sitemap/` にsitemap.md・CSV・XLSXを新規作成するためのプロンプトテンプレート。
+プロジェクトをゼロから始める際、依頼されたサイト（すでに稼働している既存サイト）のページ構成を調査し、`01_Plan/Sitemap/` にsitemap.md・CSVを新規作成するためのプロンプトテンプレート。
 出力の構成・書式・更新履歴の付け方は [sitemap-tem.md](./sitemap-tem.md) の「出力形式」に従う（本ファイルとsitemap-tem.mdの最終的な出力結果は同じ）。
 スタイルルールは `-repo_shin/Template/template-style.md` に従うこと。
 
@@ -27,7 +27,6 @@ URL：[例：https://www.chemical-trading.sojitz.com/]
 01_Plan/Sitemap/ に以下を新規作成する（初版はver.0.1として更新履歴に記録する）。
 - sitemap.md（Markdown階層形式＋ページ一覧＋更新履歴）
 - sitemap.csv
-- sitemap.xlsx
 
 【ルール】
 - ページ名・URL・階層（1〜3階層）・備考（推定かどうか）を記載する
@@ -70,8 +69,7 @@ URL：[例：https://www.chemical-trading.sojitz.com/]
 
 
 ## 出力形式
-出力するsitemap.md・CSV・XLSXの構成・書式は [sitemap-tem.md](./sitemap-tem.md) の「出力形式」を参照。ここでは初回調査時のみのルールを記載する。
+出力するsitemap.md・CSVの構成・書式は [sitemap-tem.md](./sitemap-tem.md) の「出力形式」を参照。ここでは初回調査時のみのルールを記載する。
 - 初版のバージョンは `ver.0.1` とする
 - sitemap.mdの更新履歴には `## [ver.0.1（YYYY-MM-DD）]` の下に「初版作成」と記載する
 - CSVは `ver.0.1（YYYY-MM-DD）` のバージョンブロックとして作成する
-- XLSXは `ver.0.1（YYYY-MM-DD）` のシート名で作成する
